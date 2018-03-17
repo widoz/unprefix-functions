@@ -1,0 +1,42 @@
+{
+  "name": "unprefix/unprefix-functions",
+  "description": "WordPress Utility Functions",
+  "type": "library",
+  "license": "GPL-2.0",
+  "keywords": [
+    "wordpress",
+    "library",
+    "psr",
+    "autoloader",
+    "composer",
+    "unprefix",
+    "functions"
+  ],
+  "authors": [
+    {
+      "name": "Guido Scialfa",
+      "email": "dev@guidoscialfa.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/widoz/unprefix-functions"
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "php": ">=7.0",
+    "phpunit/phpunit": "~6.5.5",
+    "brain/monkey": "dev-master",
+    "automattic/phpcs-neutron-standard": "~1.2.0",
+    "wp-coding-standards/wpcs": "^0.14.1",
+    "object-calisthenics/phpcs-calisthenics-rules": "~2.0.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Unprefix\\Tests\\": "tests/",
+      "Unprefix\\Tests\\Unit\\": "tests/unit"
+    }
+  }
+}

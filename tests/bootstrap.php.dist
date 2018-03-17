@@ -1,0 +1,7 @@
+<?php
+// Require Composer Auto-loader.
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+if (! defined('UNPREFIX_TEST_BASE_DIR')) {
+    define('UNPREFIX_TEST_BASE_DIR', dirname(__DIR__));
+}
