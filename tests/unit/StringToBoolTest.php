@@ -12,7 +12,7 @@ class StringToBoolTest extends TestCase
      */
     public function testStringToBool($testee, $expected)
     {
-        $response = \Unprefix\Functions\stringToBool($testee);
+        $response = \Unprefix\Functions\Formatting\stringToBool($testee);
 
         $this->assertSame($expected, $response);
     }

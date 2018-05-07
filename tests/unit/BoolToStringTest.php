@@ -9,14 +9,14 @@ class BoolToStringTest extends UnprefixTestCase
 {
     public function testBoolToStringReturnsYes()
     {
-        $response = \Unprefix\Functions\boolToString(true);
+        $response = \Unprefix\Functions\Formatting\boolToString(true);
 
         $this->assertSame('yes', $response);
     }
 
     public function testBoolToStringReturnsNo()
     {
-        $response = \Unprefix\Functions\boolToString(false);
+        $response = \Unprefix\Functions\Formatting\boolToString(false);
 
         $this->assertSame('no', $response);
     }

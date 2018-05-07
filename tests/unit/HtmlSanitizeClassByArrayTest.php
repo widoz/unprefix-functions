@@ -22,7 +22,7 @@ class HtmlSanitizeClassByArrayTest extends UnprefixTestCase
             'class-five',
         ];
 
-        $response = \Unprefix\Functions\sanitizeHtmlClassByArray($data);
+        $response = \Unprefix\Functions\Formatting\sanitizeHtmlClassByArray($data);
 
         $this->assertSame('class-one class-two class-three class-five', $response);
     }
