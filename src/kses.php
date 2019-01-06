@@ -58,11 +58,8 @@ function ksesImage(string $img): string
  * Post content refers to the page contents of the 'post' type and not $_POST
  * data from forms.
  *
- * @todo  Remove if the issue will be fixed. See below.
- * @see   https://core.trac.wordpress.org/ticket/37085
- *
- * @param string $data       Post content to filter.
- * @param array  $extraAttrs Extra attributes to allow.
+ * @param string $data Post content to filter.
+ * @param array $extraAttrs Extra attributes to allow.
  *
  * @return string Filtered post content with allowed HTML tags and attributes intact.
  */
@@ -92,17 +89,6 @@ function ksesPost(string $data, array $extraAttrs = []): string
             }
         }
     }
-
-    // Form attributes.
-    $tagsInputIncluded['form'] = array_merge($tagsInputIncluded['form'], ['novalidate' => true]);
-    // Fieldset attributes.
-    // WordPress have an empty array.
-    $tagsInputIncluded['fieldset'] = array_merge($tagsInputIncluded['fieldset'], [
-        'id' => true,
-        'class' => true,
-        'form' => true,
-        'name' => true,
-    ]);
 
     return wp_kses($data, $tagsInputIncluded);
 }
