@@ -1,5 +1,5 @@
 <?php # -*- coding: utf-8 -*-
-// phpcs:disable
+declare(strict_types=1);
 
 namespace WordPress\Functions\Tests\Unit;
 
