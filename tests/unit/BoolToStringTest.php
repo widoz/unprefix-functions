@@ -1,4 +1,5 @@
 <?php # -*- coding: utf-8 -*-
+// phpcs:ignoreFile
 declare(strict_types=1);
 
 namespace WordPress\Functions\Tests\Unit;
