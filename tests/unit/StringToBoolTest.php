@@ -22,11 +22,9 @@ class StringToBoolTest extends TestCase
         return [
             ['yes', true],
             ['true', true],
-            [1, true],
             ['on', true],
             ['no', false],
             ['false', false],
-            [0, false],
             ['off', false],
         ];
     }

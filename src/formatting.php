@@ -33,8 +33,7 @@ function sanitizeHtmlClassByArray(array $class): string
  *
  * This function is the same of wc_string_to_bool.
  *
- * @param string|int $value The string to convert to boolean. 'yes', 1, 'true', '1' are converted
- *                          to true.
+ * @param string $value The string to convert to boolean. 'yes', 'true', '1' are converted to true.
  *
  * @return bool True or false depending on the passed value.
  */
@@ -42,7 +41,6 @@ function stringToBool(string $value): bool
 {
     return (
         'yes' === $value
-        || 1 === $value
         || 'true' === $value
         || '1' === $value
         || 'on' === $value
