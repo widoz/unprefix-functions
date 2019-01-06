@@ -22,7 +22,7 @@ class HtmlSanitizeClassByArrayTest extends TestCase
             'class-five',
         ];
 
-        $response = \Unprefix\Functions\Formatting\sanitizeHtmlClassByArray($data);
+        $response = \WordPress\Functions\Formatting\sanitizeHtmlClassByArray($data);
 
         $this->assertSame('class-one class-two class-three class-five', $response);
     }

@@ -9,14 +9,14 @@ class BoolToStringTest extends TestCase
 {
     public function testBoolToStringReturnsYes()
     {
-        $response = \Unprefix\Functions\Formatting\boolToString(true);
+        $response = \WordPress\Functions\Formatting\boolToString(true);
 
         $this->assertSame('yes', $response);
     }
 
     public function testBoolToStringReturnsNo()
     {
-        $response = \Unprefix\Functions\Formatting\boolToString(false);
+        $response = \WordPress\Functions\Formatting\boolToString(false);
 
         $this->assertSame('no', $response);
     }
