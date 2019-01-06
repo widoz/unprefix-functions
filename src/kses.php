@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Unprefix Functions package.
+ * This file is part of the WordPress Functions package.
  *
  * (c) Guido Scialfa
  *

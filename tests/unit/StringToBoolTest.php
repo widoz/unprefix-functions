@@ -1,7 +1,7 @@
 <?php # -*- coding: utf-8 -*-
 // phpcs:disable
 
-namespace Unprefix\Tests\Unit;
+namespace WordPress\Functions\Tests\Unit;
 
 use ProjectTestsHelper\Phpunit\TestCase;
 

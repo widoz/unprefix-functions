@@ -31,10 +31,15 @@
     "widoz/project-tests-helper": "dev-master",
     "inpsyde/php-coding-standards": "^v0.13.3"
   },
+  "autoload": {
+    "psr-4": {
+      "WordPress\\Functions": "src/"
+    }
+  },
   "autoload-dev": {
     "psr-4": {
-      "Unprefix\\Tests\\": "tests/",
-      "Unprefix\\Tests\\Unit\\": "tests/unit"
+      "WordPress\\Functions\\Tests\\": "tests/",
+      "WordPress\\Functions\\Tests\\Unit\\": "tests/unit"
     }
   },
   "extra": {
