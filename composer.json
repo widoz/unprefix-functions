@@ -33,7 +33,7 @@
   },
   "autoload": {
     "psr-4": {
-      "WordPress\\Functions": "src/"
+      "WordPress\\Functions\\": "src/"
     }
   },
   "autoload-dev": {
