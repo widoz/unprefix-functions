@@ -3,7 +3,7 @@
 
 namespace Unprefix\Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use ProjectTestsHelper\Phpunit\TestCase;
 
 class StringToBoolTest extends TestCase
 {
@@ -35,6 +35,6 @@ class StringToBoolTest extends TestCase
     {
         parent::setUp();
 
-        require_once UNPREFIX_TEST_BASE_DIR . '/src/formatting.php';
+        require_once TEST_BASE_DIR . '/src/formatting.php';
     }
 }

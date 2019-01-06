@@ -3,9 +3,9 @@
 
 namespace Unprefix\Tests\Unit;
 
-use Unprefix\Tests\UnprefixTestCase;
+use ProjectTestsHelper\Phpunit\TestCase;
 
-class BoolToStringTest extends UnprefixTestCase
+class BoolToStringTest extends TestCase
 {
     public function testBoolToStringReturnsYes()
     {
@@ -25,6 +25,6 @@ class BoolToStringTest extends UnprefixTestCase
     {
         parent::setUp();
 
-        require_once UNPREFIX_TEST_BASE_DIR . '/src/formatting.php';
+        require_once TEST_BASE_DIR . '/src/formatting.php';
     }
 }

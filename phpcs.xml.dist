@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Functions Rulesets">
+    <file>./src</file>
+
+    <rule ref="Inpsyde"/>
+</ruleset>

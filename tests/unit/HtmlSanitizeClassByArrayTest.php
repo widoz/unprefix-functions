@@ -4,9 +4,9 @@
 namespace Unprefix\Tests\Unit;
 
 use \Brain\Monkey;
-use Unprefix\Tests\UnprefixTestCase;
+use ProjectTestsHelper\Phpunit\TestCase;
 
-class HtmlSanitizeClassByArrayTest extends UnprefixTestCase
+class HtmlSanitizeClassByArrayTest extends TestCase
 {
     public function testValidClassValue()
     {
@@ -31,6 +31,6 @@ class HtmlSanitizeClassByArrayTest extends UnprefixTestCase
     {
         parent::setUp();
 
-        require_once UNPREFIX_TEST_BASE_DIR . '/src/formatting.php';
+        require_once TEST_BASE_DIR . '/src/formatting.php';
     }
 }

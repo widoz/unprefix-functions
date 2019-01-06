@@ -3,11 +3,13 @@ php:
     - '7.0'
     - '7.1'
     - '7.2'
+    - '7.3'
 install:
     composer install
 
 script:
     - vendor/bin/phpunit --coverage-clover=coverage/report/coverage.xml
+    - vendor/bin/phpcs
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
