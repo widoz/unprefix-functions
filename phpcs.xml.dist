@@ -2,5 +2,7 @@
 <ruleset name="WordPress Functions Rulesets">
     <file>./src</file>
 
+     <exclude-pattern>*/tests/*</exclude-pattern>
+
     <rule ref="Inpsyde"/>
 </ruleset>
