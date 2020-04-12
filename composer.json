@@ -1,16 +1,11 @@
 {
-  "name": "unprefix/unprefix-functions",
-  "description": "WordPress Utility Functions",
+  "name": "widoz/wp-functions",
+  "description": "WordPress functions utility",
   "type": "library",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "keywords": [
     "wordpress",
-    "library",
-    "psr",
-    "autoloader",
-    "composer",
-    "unprefix",
-    "functions"
+    "library"
   ],
   "authors": [
     {
@@ -20,31 +15,39 @@
   ],
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://github.com/widoz/unprefix-functions"
+    "issues": "https://github.com/widoz/wp-functions"
   },
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7.5.0",
-    "brain/monkey": "^2.2.0",
-    "widoz/project-tests-helper": "dev-master",
-    "inpsyde/php-coding-standards": "^v0.13.3"
+    "phpunit/phpunit": "^8",
+    "brain/monkey": "^2.0",
+    "widoz/project-tests-helper": "dev-phpunit-8",
+    "inpsyde/php-coding-standards": "^0.13",
+    "fzaninotto/faker": "^1.9@dev",
+    "johnpbloch/wordpress-core": "dev-master",
+    "vimeo/psalm": "^3.0@dev"
   },
   "autoload": {
     "psr-4": {
-      "WordPress\\Functions\\": "src/"
+      "Widoz\\Wp\\Functions\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "WordPress\\Functions\\Tests\\": "tests/",
-      "WordPress\\Functions\\Tests\\Unit\\": "tests/unit"
+      "Widoz\\Wp\\Functions\\Tests\\": "tests/php",
+      "Widoz\\Wp\\Functions\\Tests\\Unit\\": "tests/php/Unit"
     }
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0.x-dev"
+      "dev-develop": "0.1.x-dev"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.3.16"
     }
   }
 }

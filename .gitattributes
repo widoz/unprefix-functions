@@ -1,0 +1,10 @@
+/.psalm/ export-ignore
+/tests/ export-ignore
+/.github/ export-ignore
+composer.json export-ignore
+composer.lock export-ignore
+gumphp.yml export-ignore
+LICENSE export-ignore
+phpcs.xml export-ignore
+phpunit.xml export-ignore
+psalm.xml export-ignore

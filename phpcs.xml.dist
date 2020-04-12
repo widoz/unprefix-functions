@@ -1,8 +1,44 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Functions Rulesets">
+<ruleset name="Wp Functions">
+    <description>Wp Functions Coding Standard</description>
+
+    <arg name="extensions" value="php,inc" />
+
+    <config name="testVersion" value="7.3-"/>
+    <config name="ignore_warnings_on_exit" value="1"/>
+
     <file>./src</file>
+    <file>./tests</file>
+    <exclude-pattern>./tests/php/bootstrap.php</exclude-pattern>
+    <exclude-pattern>./vendor</exclude-pattern>
 
-     <exclude-pattern>*/tests/*</exclude-pattern>
+    <rule ref="Inpsyde">
+        <exclude name="Inpsyde.CodeQuality.NoAccessors.NoGetter"/>
+        <exclude name="Inpsyde.CodeQuality.NoAccessors.NoSetter"/>
+        <exclude name="Inpsyde.CodeQuality.FunctionBodyStart.WrongForMultiLineDeclaration"/>
+    </rule>
 
-    <rule ref="Inpsyde"/>
+    <rule ref="PHPCompatibility">
+        <exclude name="PHPCompatibility.FunctionDeclarations.NewNullableTypes.returnTypeFound" />
+        <exclude name="PHPCompatibility.FunctionDeclarations.NewReturnTypeDeclarations.voidFound"/>
+        <exclude name="PHPCompatibility.Classes.NewConstVisibility.Found"/>
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewNullableTypes.typeDeclarationFound"
+        />
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewParamTypeDeclarations.iterableFound"
+        />
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewReturnTypeDeclarations.iterableFound"
+        />
+        <exclude name="PHPCompatibility.Lists.NewKeyedList.Found" />
+        <exclude name="PHPCompatibility.Lists.NewShortList.Found" />
+    </rule>
+
+    <rule ref="WordPress.PHP.StrictInArray.MissingArguments">
+        <type>warning</type>
+    </rule>
+    <rule ref="WordPress.Arrays.CommaAfterArrayItem.NoComma">
+        <type>warning</type>
+    </rule>
 </ruleset>

@@ -1,26 +1,19 @@
 <phpunit
-        bootstrap="./tests/bootstrap.php.dist"
+        bootstrap="tests/php/bootstrap.php"
         colors="true"
         beStrictAboutOutputDuringTests="true"
         beStrictAboutChangesToGlobalState="true"
-        backupGlobals="true"
-        backupStaticAttributes="true"
-        processIsolation="true"
         stopOnError="false"
-        stopOnFailure="false">
+        stopOnFailure="false"
+>
     <testsuites>
-        <testsuite>
-            <directory suffix="Test.php">./tests/unit/</directory>
+        <testsuite name="All">
+            <directory suffix="Test.php">./tests/php/</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory suffix=".php">./src/</directory>
-            <file>./</file>
         </whitelist>
     </filter>
-    <logging>
-        <log type="coverage-clover" target="coverage/report/clover.xml"/>
-        <log type="coverage-html" target="coverage/report/html" lowUpperBound="35" highLowerBound="70"/>
-    </logging>
 </phpunit>

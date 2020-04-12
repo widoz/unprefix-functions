@@ -1,6 +1,0 @@
-<?php
-if (! defined('TEST_BASE_DIR')) {
-    define('TEST_BASE_DIR', dirname(__DIR__));
-}
-
-require_once TEST_BASE_DIR . '/vendor/widoz/project-tests-helper/inc/phpunit/bootstrap.php.dist';

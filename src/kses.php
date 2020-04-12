@@ -1,27 +1,19 @@
-<?php # -*- coding: utf-8 -*-
+<?php
+
 declare(strict_types=1);
 
-/*
- * This file is part of the WordPress Functions package.
- *
- * (c) Guido Scialfa
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace Widoz\Wp\Functions;
 
-namespace WordPress\Functions\Kses;
+use function in_array;
 
 /**
  * Kses Image
- *
  * This is a wrapper function for wp_kses that allow only specific  html attributes for images.
- *
- * @uses wp_kses()
  *
  * @param string $img The image string to process.
  *
  * @return string The processed string containing only the allowed attributes
+ * @uses wp_kses()
  */
 function ksesImage(string $img): string
 {
@@ -30,7 +22,7 @@ function ksesImage(string $img): string
      *
      * @param array $list The list of the allowed attributes
      */
-    $attrs = apply_filters('unprefix_kses_image_allowed_attrs', [
+    $attrs = apply_filters('kses_image_allowed_attrs', [
         'img' => [
             'src' => true,
             'srcset' => true,
@@ -82,11 +74,14 @@ function ksesPost(string $data, array $extraAttrs = []): string
         // Extract the key for comparison.
         $extraAttrsKeys = array_keys($extraAttrs);
         foreach ($tagsInputIncluded as $tag => $attrs) {
-            // It is a tag where we want to insert additional attributes?
-            if (in_array($tag, $extraAttrsKeys, true)) {
-                // If so, include the extra attributes list within the main tags input list.
-                $tagsInputIncluded[$tag] = array_merge($tagsInputIncluded[$tag], $extraAttrs[$tag]);
-            }
+            /*
+             * It is a tag where we want to insert additional attributes?
+             * If so, include the extra attributes list within the main tags input list.
+             */
+            in_array($tag, $extraAttrsKeys, true) and $tagsInputIncluded[$tag] = array_merge(
+                $tagsInputIncluded[$tag],
+                $extraAttrs[$tag]
+            );
         }
     }
 
