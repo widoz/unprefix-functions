@@ -152,3 +152,6 @@ composer.lock
 
 # Npm
 package-lock.json
+
+# PhpUnit
+.phpunit.result.cache
