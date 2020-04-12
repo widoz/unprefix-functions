@@ -41,6 +41,7 @@
     }
   },
   "extra": {
+    "installer-disable": true,
     "branch-alias": {
       "dev-develop": "0.1.x-dev"
     }
